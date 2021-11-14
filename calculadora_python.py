@@ -2,8 +2,10 @@ from tkinter import *
 janela=Tk()
 janela.title("Calculadora Tkinter - Matemática - IMC")
 janela.geometry("1000x500")
+#Funções
 def percentual():
     pass
+#Janela Matematica
 LabelFrame_calculadora=LabelFrame(janela,text="MATEMÁTICA",borderwidth=1, relief="solid")
 LabelFrame_calculadora.place(x=20,y=20, width=470, height=460)
 Frame_calculadora=Frame(LabelFrame_calculadora,borderwidth=1, relief="solid")
@@ -16,19 +18,14 @@ botao_quadrado=Button(LabelFrame_calculadora, text="X2",command=percentual)
 botao_quadrado.place(x=245,y=140, width=90, height=44) 
 botao_percentual=Button(LabelFrame_calculadora, text="/",command=percentual)
 botao_percentual.place(x=355,y=140, width=90, height=44) 
-
 botao_percentual=Button(LabelFrame_calculadora, text="X",command=percentual)
 botao_percentual.place(x=355,y=199, width=90, height=44) 
-
 botao_percentual=Button(LabelFrame_calculadora, text="-",command=percentual)
 botao_percentual.place(x=355,y=258, width=90, height=44) 
-
 botao_percentual=Button(LabelFrame_calculadora, text="+",command=percentual)
 botao_percentual.place(x=355,y=317, width=90, height=44) 
-
 botao_percentual=Button(LabelFrame_calculadora, text="=",command=percentual)
 botao_percentual.place(x=355,y=372, width=90, height=44) 
-
 Frame_numero=Frame(LabelFrame_calculadora,borderwidth=1)
 Frame_numero.place(x=20,y=204, width=315, height=215)
 botao_7=Button(Frame_numero, text="7",command=percentual)
@@ -57,7 +54,7 @@ botao_a=Button(Frame_numero, text="<",command=percentual)
 botao_a.place(x=223,y=174, width=90, height=38) 
 
 
-
+#Janela IMC
 LabelFrame_imc=LabelFrame(janela,text="IMC",borderwidth=1, relief="solid")
 LabelFrame_imc.place(x=510,y=20, width=470, height=460)
 janela.mainloop()
