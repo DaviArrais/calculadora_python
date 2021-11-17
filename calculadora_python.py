@@ -9,96 +9,214 @@ janela.geometry("1000x500")
 lista_comandos=[]
 var=StringVar()
 
-
-operador=0
+n1=StringVar()
+x=0
+y=0
+numerador=0
+denominador=0
+op=""
 #Funções
 def percentual():
     var.set("%")
-    lista_comandos.append("%")
+    print(lista_comandos)
+    print(numerador)
 
 def num1():
-    var.set(1)
+    #var.set(1)
     lista_comandos.append(1)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
+    
         
 def num2():
-    var.set(2)
+    #var.set(2)
     lista_comandos.append(2)
-    print(lista_comandos)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador=int(operador)
+    numerador= var.get() 
+    print(numerador)
 
 def num3():
-    var.set(3)
+    #var.set(3)
     lista_comandos.append(3)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
         
 def num4():
-    var.set(4)
+    #var.set(4)
     lista_comandos.append(4)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
     
 def num5():
-    var.set(5)
+    #var.set(5)
     lista_comandos.append(5)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
         
 def num6():
-    var.set(6)
+    #var.set(6)
     lista_comandos.append(6)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
 
 def num7():
-    var.set(7)
+    #var.set(7)
     lista_comandos.append(7)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
         
 def num8():
-    var.set(8)
+    #var.set(8)
     lista_comandos.append(8)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
     
 def num9():
-    var.set(9)
+    #var.set(9)
     lista_comandos.append(9)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador= var.get() 
     print(lista_comandos)
+    print(numerador)
         
 def num0():
-    var.set(0)
+    #var.set(0)
     lista_comandos.append(0)
+    operador=""
+    for n in range(0, len(lista_comandos)):
+        operador=operador+str(lista_comandos[n])
+    var.set(operador)
+    numerador=int(operador)
     print(lista_comandos)
+    print(numerador)
 
 def igual():
-    var.set(sum(lista_comandos))
+    retorno=0
+    x1=int(n1.get())
+    x2=int(var.get())
+    if op=="+":
+        retorno=x1+x2
+    elif op=="-":
+       retorno=x1-x2 
+    elif op=="*":
+       retorno=x1*x2 
+    elif op=="/":
+       retorno=x1/x2 
+    elif op=="%":
+       retorno=(x1/100)*x2   
+    elif op=="x2":
+       retorno=x1**x2  
+    var.set(retorno)
     print(lista_comandos)
+    print(retorno)
 
 def apagar_ultimo():
     var.set("<")
     lista_comandos.pop()
     print(lista_comandos)
+    print(numerador)
 
 def limpar():
     var.set("0")
+    n1.set("0")
     for x in range(0,len(lista_comandos)):
         lista_comandos.pop()
     print(lista_comandos)
     
 def quadrado():
+    n=var.get()
+    n1.set(n)
+    global op
+    op="x2" 
     var.set("X2")
+    for x in range(0,len(lista_comandos)):
+        lista_comandos.pop()
     print(lista_comandos)
 
 def divisao():
+    n=var.get()
+    n1.set(n)
+    global op
+    op="/" 
     var.set("/")
+    for x in range(0,len(lista_comandos)):
+        lista_comandos.pop()
     print(lista_comandos)
 
 def multiplicacao():
+    n=var.get()
+    n1.set(n)
+    global op
+    op="*" 
     var.set("*")
+    for x in range(0,len(lista_comandos)):
+        lista_comandos.pop()
     print(lista_comandos)
 
 def subtracao():
+    n=var.get()
+    n1.set(n)
+    global op
+    op="-" 
     var.set("-")
+    for x in range(0,len(lista_comandos)):
+        lista_comandos.pop()
+    
     print(lista_comandos)
 
 def soma():
+    n=var.get()
+    n1.set(n)
     var.set("+")
+    global op
+    op="+" 
+    for x in range(0,len(lista_comandos)):
+        lista_comandos.pop()
+    print(lista_comandos)
+    print(numerador)
+
     print(lista_comandos)
 
 def virgula():
@@ -111,8 +229,8 @@ LabelFrame_calculadora.place(x=20,y=20, width=470, height=460)
 Frame_calculadora=Frame(LabelFrame_calculadora,borderwidth=1, relief="solid")
 Frame_calculadora.place(x=20,y=20, width=430, height=100)
 
-#l=Label(LabelFrame_calculadora, textvariable=var).pack()
-t=Entry(Frame_calculadora, textvariable=var).pack()
+l=Label(Frame_calculadora, textvariable=n1).pack()
+t=Entry(Frame_calculadora, textvariable=var, justify=RIGHT).pack()
 
 botao_percentual=Button(LabelFrame_calculadora, text="%",command=percentual)
 botao_percentual.place(x=25,y=140, width=90, height=44) 
